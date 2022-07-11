@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora De Impuestos Steam</title>
+</head>
+
+<body>
+    <h1 class="title">Calculadora De Impuestos Steam</h1>
+    <div class="form">
+        <form action="enviar.php" method="post" enctype="text/plain">
+            <div class="form__field">
+                <label for="">Valor Del Juego</label>
+                <input type="number" placeholder="Valor Del Juego">
+            </div>
+            <div class="form__field">
+                <label for="">Provincia</label>
+                <select name="provincias">
+                    <option value="" disabled selected hidden>Seleccionar</option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Chaco">Chaco</option>
+                    <option value="Córdoba">Córdoba</option>
+                    <option value="La Pampa">La Pampa</option>
+                    <option value="Salta">Salta</option>
+                    <option value="Neuquén">Neuquén</option>
+                    <option value="Río Negro">Río Negro</option>
+                    <option value="Ninguna De Las Anteriores">Ninguna De Las Anteriores</option>
+                </select>
+            </div>
+            <div class="form__field">
+                <label for="">Valor De Los Impuestos</label>
+                <input type="number" placeholder="Valor De Los Impuestos">
+            </div>
+            <div class="form__submit">
+                <input type="submit" value="Calcular">
+            </div>
+
+        </form>
+    </div>
+    <script src="calculadoraSteam.js"></script>
+</body>
+
+</html>

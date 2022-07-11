@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    height: auto;
+    background-color: purple;
+    border-radius: 2rem;
+}
+.form__field{
+    font-size: 2rem;
+    color: #ffff;
+    padding: 1rem;
+}
+
+input, select{
+    display: block;
+    margin: 0.5rem 0 0.5rem 0;
+    appearance: textfield;
+}
+
+.form__submit{
+    display: flex;
+    justify-content: center;
+}
