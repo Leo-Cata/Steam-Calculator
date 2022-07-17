@@ -1,43 +1,111 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+/*
+    font-family: 'Open Sans', sans-serif;
+*/
+$bg-main : #161920;
+$bg-secondary: #1F232E;
+$bg-border: #292E3D;
+$half-rem: 0.5rem;
+$auto-rem: 0 auto;
+
+@mixin justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin font-titles {
+    font-family: 'Open Sans', sans-serif;
+    color: #ffff;
+}
+
+* {//reset
     margin: 0;
+    background-color: $bg-main;
+    box-sizing: border-box;
 }
 
-.title{
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+/*title and final <P>*/
+.title {
+    margin: 1rem;
+    @include justify-center;
+    @include font-titles;
+    font-size: 2rem;
 }
 
-.form{
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    margin: 0 auto;
+/*form starts*/
+.form {
+    margin: $auto-rem;
+    width: 30%;
     height: auto;
-    background-color: purple;
-    border-radius: 2rem;
+    background-color: $bg-secondary;
+    border-radius: $half-rem;
+    border: solid 3px $bg-border;
+    box-shadow: 0px 0px 5px $bg-border;
+    @include font-titles;
 }
-.form__field{
+
+.form__field {//form texts
     font-size: 2rem;
     color: #ffff;
+    background-color: $bg-secondary;
     padding: 1rem;
 }
 
-input, select{
-    display: block;
-    margin: 0.5rem 0 0.5rem 0;
+input,
+select {
+    margin: $half-rem 0 $half-rem 0;
     appearance: textfield;
+    background-color: #c7d5e0;
+    font-family: 'Open Sans', sans-serif;
+    @include justify-center;
 }
 
-.form__submit{
-    display: flex;
-    justify-content: center;
+.form__label {//form labels and button 
+    @include justify-center;
+    background-color: $bg-secondary;
+    padding: $half-rem;
 }
 
-#resultado{
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
-    font-size: 2rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.form__input {
+    margin: $auto-rem;
+    min-width: 25rem;
+    height: 2rem;
+    background-color: $bg-secondary;
+    border-style: none;
+    border-bottom: solid 3px $bg-border;
+    color: white;
+    font-size: 1rem;
+    outline: 0;
+    border-radius: 0.25rem;
 }
+
+.form__input:focus {
+    outline: $bg-border solid;
+
+}
+
+option {
+    background-color: $bg-secondary;
+}
+
+.btn {//calcular button
+    padding: 0.65rem;
+    font-size: 1.25rem;
+    background-color: $bg-border;
+    color: #ffff;
+    border: solid 3px $bg-main;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: $bg-main;
+    border: solid 3px $bg-border;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/*form ends*/

@@ -1,30 +1,36 @@
+let prov = document.getElementById("prov");
+let provImp;
+prov.addEventListener("change", function () {// get prov option value
+    provImp = parseFloat(prov.value)
+})
+
+let gameValue = document.getElementById("gameValue");
+let precio;
+gameValue.addEventListener("change", function () {// get value input 
+    precio = parseFloat(gameValue.value)
+})
+
+let gameTax = document.getElementById("taxValue");
+let tax;
+gameTax.addEventListener("change", function () {// get tax value
+    tax = parseInt(gameTax.value)
+})
+
+let gameName = document.getElementById("gameName")
+let nombreGame;
+gameName.addEventListener("change",function(){// get name 
+    nombreGame = gameName.value;
+})
+
+let calcularSubmit = document.getElementById("btn__calcular");
 let resultado = document.getElementById("resultado");
-
-function calculate() {
-    let calculate = prompt("Calcular Precio Con Impuesto? si/no");
-    let gameIndex = ["Forza Horizon 5", "Raft", "Elden Ring", "Project Zomboid"]
-    while (calculate == "si") {
-        let gameName = prompt("Ingrese nombre del juego");
-        if (!gameIndex.includes(gameName)) {
-            gameIndex.push(gameName);
-        }
-        console.log(gameIndex);
-        let gamePrice = parseFloat(prompt("Ingrese El Precio En Pesos"));
-        let gameTax = parseFloat(prompt("Ingrese El Valor De Los Impuestos En Numeros. (Generalmente 65%)"));
-        let finalPrice = gamePrice + (gamePrice * gameTax / 100);
-
-        // console.log("Precio Final A Pagar Por", gameName, "Es: ", finalPrice);
-        resultado.innerHTML = `<p>Precio Final A Pagar Por ${gameName} Es: ${finalPrice}`; //console log trasladado a que crea un p por fuera del form
-
-        let recalculate = prompt("Calcular Precio Con Impuesto? si/no");
-        if (recalculate == "no") {
-            console.log("Que Tenga Un Buen Dia");
-            break
-        }
-    }
-}
+calcularSubmit.addEventListener("click",function calcular(e) {// on click, get the price of game + incl regional and national taxes, round value 
+    e.preventDefault();
+    let finalPrice = precio + Math.round((precio * (tax + provImp) / 100) * 100) / 100;// round and show only 2 decimals
+    resultado.innerHTML = `<p class="title">Precio Final A Pagar Por ${nombreGame} Es: ${finalPrice}`;// insert <p> with the result
+})
 
 
 
 
-calculate()
+// calculate()

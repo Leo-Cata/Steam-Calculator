@@ -1,46 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+/*
+    font-family: 'Open Sans', sans-serif;
+*/
 * {
   margin: 0;
+  background-color: #161920;
+  box-sizing: border-box;
 }
 
+/*title and final <P>*/
 .title {
+  margin: 1rem;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 2rem;
 }
 
+/*form starts*/
 .form {
-  display: flex;
-  justify-content: center;
-  width: 50%;
   margin: 0 auto;
+  width: 30%;
   height: auto;
-  background-color: purple;
-  border-radius: 2rem;
+  background-color: #1F232E;
+  border-radius: 0.5rem;
+  border: solid 3px #292E3D;
+  box-shadow: 0px 0px 5px #292E3D;
+  font-family: "Open Sans", sans-serif;
+  color: white;
 }
 
 .form__field {
   font-size: 2rem;
   color: white;
+  background-color: #1F232E;
   padding: 1rem;
 }
 
-input, select {
-  display: block;
+input,
+select {
   margin: 0.5rem 0 0.5rem 0;
   -webkit-appearance: textfield;
      -moz-appearance: textfield;
           appearance: textfield;
-}
-
-.form__submit {
+  background-color: #c7d5e0;
+  font-family: "Open Sans", sans-serif;
   display: flex;
   justify-content: center;
 }
 
-#resultado {
+.form__label {
   display: flex;
   justify-content: center;
-  margin: 1rem;
-  font-size: 2rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}/*# sourceMappingURL=style.css.map */
+  background-color: #1F232E;
+  padding: 0.5rem;
+}
+
+.form__input {
+  margin: 0 auto;
+  min-width: 25rem;
+  height: 2rem;
+  background-color: #1F232E;
+  border-style: none;
+  border-bottom: solid 3px #292E3D;
+  color: white;
+  font-size: 1rem;
+  outline: 0;
+  border-radius: 0.25rem;
+}
+
+.form__input:focus {
+  outline: #292E3D solid;
+}
+
+option {
+  background-color: #1F232E;
+}
+
+.btn {
+  padding: 0.65rem;
+  font-size: 1.25rem;
+  background-color: #292E3D;
+  color: white;
+  border: solid 3px #161920;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #161920;
+  border: solid 3px #292E3D;
+}
+
+.btn:active {
+  position: relative;
+  top: 1px;
+}
+
+/*form ends*//*# sourceMappingURL=style.css.map */

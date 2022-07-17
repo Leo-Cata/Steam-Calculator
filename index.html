@@ -10,17 +10,21 @@
 </head>
 
 <body>
-    <h1 class="title">Calculadora De Impuestos Steam</h1>
-    <div class="form">
+    <h1 class="title">Calculadora De Impuestos Steam</h1> <!-- Titulo -->
+    <div class="form"> <!--form input del usuario-->
         <form action="enviar.php" method="post" enctype="text/plain">
             <div class="form__field">
-                <label for="">Valor Del Juego</label>
-                <input type="number" placeholder="Valor Del Juego">
+                <label for="" class="form__label">Nombre Del Juego</label>
+                <input type="text" placeholder="Nombre Del Juego" id="gameName" class="form__input">
             </div>
             <div class="form__field">
-                <label for="">Provincia</label>
-                <select name="provincias">
-                    <option value="" disabled selected hidden>Seleccionar</option>
+                <label for="" class="form__label">Valor Del Juego</label>
+                <input type="number" placeholder="Valor Del Juego" id="gameValue" class="form__input">
+            </div>
+            <div class="form__field">
+                <label for="" class="form__label">Provincia</label>
+                <select name="provincias" id="prov" class="form__input">
+                    <option value="0" disabled selected hidden>Seleccionar</option>
                     <option value="2">Buenos Aires</option>
                     <option value="5.5">Chaco</option>
                     <option value="3">Córdoba</option>
@@ -28,21 +32,21 @@
                     <option value="3.6">Salta</option>
                     <option value="3">Neuquén</option>
                     <option value="5">Río Negro</option>
-                    <option value="">Ninguna De Las Anteriores</option>
+                    <option value="0">Ninguna De Las Anteriores</option>
                 </select>
             </div>
             <div class="form__field">
-                <label for="">Valor De Los Impuestos</label>
-                <input type="number" placeholder="Valor De Los Impuestos">
+                <label for="" class="form__label">Valor De Los Impuestos</label>
+                <input type="number" placeholder="Valor De Los Impuestos" id="taxValue" class="form__input">
             </div>
-            <div class="form__submit">
-                <input type="submit" value="Calcular">
+            <div class="form__label">
+                <input type="submit" value="Calcular" id="btn__calcular" class="btn">
             </div>
 
         </form>
     </div>
 
-    <div id="resultado"></div>
+    <div id="resultado"></div> <!-- display output de la -->
 
 
     <script src="calculadoraSteam.js"></script>
