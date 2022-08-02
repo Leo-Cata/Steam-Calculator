@@ -98,4 +98,13 @@ option {
   top: 1px;
 }
 
-/*form ends*//*# sourceMappingURL=style.css.map */
+/*form ends*/
+.sweetError {
+  background-color: #161920;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+.swal2-x-mark {
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */

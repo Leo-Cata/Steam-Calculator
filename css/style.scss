@@ -18,7 +18,8 @@ $auto-rem: 0 auto;
     color: #ffff;
 }
 
-* {//reset
+* {
+    //reset
     margin: 0;
     background-color: $bg-main;
     box-sizing: border-box;
@@ -44,7 +45,8 @@ $auto-rem: 0 auto;
     @include font-titles;
 }
 
-.form__field {//form texts
+.form__field {
+    //form texts
     font-size: 2rem;
     color: #ffff;
     background-color: $bg-secondary;
@@ -60,7 +62,8 @@ select {
     @include justify-center;
 }
 
-.form__label {//form labels and button 
+.form__label {
+    //form labels and button 
     @include justify-center;
     background-color: $bg-secondary;
     padding: $half-rem;
@@ -88,7 +91,8 @@ option {
     background-color: $bg-secondary;
 }
 
-.btn {//calcular button
+.btn {
+    //calcular button
     padding: 0.65rem;
     font-size: 1.25rem;
     background-color: $bg-border;
@@ -109,3 +113,13 @@ option {
 }
 
 /*form ends*/
+
+.sweetError {
+    background-color: #161920;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.swal2-x-mark {
+    border-radius: 50%;
+}
