@@ -6,7 +6,9 @@ $bg-main : #161920;
 $bg-secondary: #1F232E;
 $bg-border: #292E3D;
 $half-rem: 0.5rem;
-$auto-rem: 0 auto;
+$auto-margin: 0 auto;
+$font: 'Open Sans',
+sans-serif;
 
 @mixin justify-center {
     display: flex;
@@ -21,8 +23,11 @@ $auto-rem: 0 auto;
 * {
     //reset
     margin: 0;
-    background-color: $bg-main;
     box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-main;
 }
 
 /*title and final <P>*/
@@ -35,7 +40,7 @@ $auto-rem: 0 auto;
 
 /*form starts*/
 .form {
-    margin: $auto-rem;
+    // margin: $auto-margin;
     width: 30%;
     height: auto;
     background-color: $bg-secondary;
@@ -70,8 +75,8 @@ select {
 }
 
 .form__input {
-    margin: $auto-rem;
-    min-width: 25rem;
+    margin: $auto-margin;
+    // min-width: 25rem;
     height: 2rem;
     background-color: $bg-secondary;
     border-style: none;
@@ -114,6 +119,7 @@ option {
 
 /*form ends*/
 
+/*error alert starts*/
 .sweetError {
     background-color: #161920;
     color: white;
@@ -122,4 +128,47 @@ option {
 
 .swal2-x-mark {
     border-radius: 50%;
+}
+/*error alert ends*/
+
+/*weather starts*/
+.weather {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    margin-right: $half-rem;
+}
+
+.weather__city {
+    font-family: $font;
+    font-size: 1.2rem;
+}
+
+.weather__temp {
+    font-family: $font;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.weather__icon {
+    margin-right: $half-rem;
+}
+/*weather ends*/
+
+@media screen and (max-width: 900px) {
+    .form {
+        width: 90%;
+    }
+
+    .form__label,
+    .title {
+        font-size: 1rem;
+    }
+
+    .weather {
+        position: static;
+        text-align: center;
+        margin-top: 34%;
+    }
 }

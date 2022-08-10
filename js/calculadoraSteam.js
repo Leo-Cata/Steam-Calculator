@@ -1,5 +1,6 @@
 // default tax value
-let taxValue = 75;
+const taxValue = 75;
+
 
 let prov = document.getElementById("prov");
 let provImp;
@@ -9,17 +10,22 @@ prov.addEventListener("change", function () { // get prov option value, on chang
     localStorage.setItem("provinciaValue", prov.value);
 })
 
+
 let gameValue = document.getElementById("gameValue");
 let precio;
 gameValue.addEventListener("change", function () { // get value input 
     precio = parseFloat(gameValue.value)
 })
 
+
 let gameName = document.getElementById("gameName")
 let nombreGame = "El Juego";
 
+
 let calcularSubmit = document.getElementById("btn__calcular");
 let resultado = document.getElementById("resultado");
+
+
 // on click, get the price of game + incl regional and national taxes, round value 
 calcularSubmit.addEventListener("click", function calcular(e) {
     e.preventDefault();
@@ -37,6 +43,7 @@ calcularSubmit.addEventListener("click", function calcular(e) {
     }
 }) // insert <p> with the result
 
+
 // on load, if the previous prov is not null, set it as selected and set stored provImp value
 let localStrProvIndex = localStorage.getItem("provinciaIndex")
 let localStrProvValue = localStorage.getItem("provinciaValue")
@@ -44,6 +51,7 @@ if (localStrProvIndex != null) {
     document.getElementById("prov").selectedIndex = localStrProvIndex;
     provImp = parseFloat(localStrProvValue);
 }
+
 
 //if final price is nan show a pop up error
 function showError() {
@@ -56,5 +64,3 @@ function showError() {
         customClass: 'sweetError',
     })
 };
-
-// nombreGame = undefined ? nombreGame : nombreGame = "El Juego";

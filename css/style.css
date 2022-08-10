@@ -4,8 +4,11 @@
 */
 * {
   margin: 0;
-  background-color: #161920;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #161920;
 }
 
 /*title and final <P>*/
@@ -20,7 +23,6 @@
 
 /*form starts*/
 .form {
-  margin: 0 auto;
   width: 30%;
   height: auto;
   background-color: #1F232E;
@@ -59,7 +61,6 @@ select {
 
 .form__input {
   margin: 0 auto;
-  min-width: 25rem;
   height: 2rem;
   background-color: #1F232E;
   border-style: none;
@@ -99,6 +100,7 @@ option {
 }
 
 /*form ends*/
+/*error alert starts*/
 .sweetError {
   background-color: #161920;
   color: white;
@@ -107,4 +109,45 @@ option {
 
 .swal2-x-mark {
   border-radius: 50%;
+}
+
+/*error alert ends*/
+/*weather starts*/
+.weather {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.weather__city {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+.weather__temp {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.weather__icon {
+  margin-right: 0.5rem;
+}
+
+/*weather ends*/
+@media screen and (max-width: 900px) {
+  .form {
+    width: 90%;
+  }
+  .form__label,
+.title {
+    font-size: 1rem;
+  }
+  .weather {
+    position: static;
+    text-align: center;
+    margin-top: 34%;
+  }
 }/*# sourceMappingURL=style.css.map */
