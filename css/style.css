@@ -79,7 +79,7 @@ option {
   background-color: #1F232E;
 }
 
-.btn {
+.btnn, .history__btn {
   padding: 0.65rem;
   font-size: 1.25rem;
   background-color: #292E3D;
@@ -89,12 +89,12 @@ option {
   cursor: pointer;
 }
 
-.btn:hover {
+.btnn:hover, .history__btn:hover {
   background-color: #161920;
   border: solid 3px #292E3D;
 }
 
-.btn:active {
+.btnn:active, .history__btn:active {
   position: relative;
   top: 1px;
 }
@@ -137,6 +137,26 @@ option {
 }
 
 /*weather ends*/
+/*history starts*/
+.history__btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.history__text {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/*history ends*/
 @media screen and (max-width: 900px) {
   .form {
     width: 90%;
@@ -149,5 +169,8 @@ option {
     position: static;
     text-align: center;
     margin-top: 34%;
+  }
+  .history__text {
+    font-size: 0.9rem;
   }
 }/*# sourceMappingURL=style.css.map */

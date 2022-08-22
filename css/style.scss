@@ -9,6 +9,7 @@ $half-rem: 0.5rem;
 $auto-margin: 0 auto;
 $font: 'Open Sans',
 sans-serif;
+$font-color: white;
 
 @mixin justify-center {
     display: flex;
@@ -17,7 +18,7 @@ sans-serif;
 
 @mixin font-titles {
     font-family: 'Open Sans', sans-serif;
-    color: #ffff;
+    color: $font-color;
 }
 
 * {
@@ -53,7 +54,7 @@ body {
 .form__field {
     //form texts
     font-size: 2rem;
-    color: #ffff;
+    color: $font-color;
     background-color: $bg-secondary;
     padding: 1rem;
 }
@@ -81,7 +82,7 @@ select {
     background-color: $bg-secondary;
     border-style: none;
     border-bottom: solid 3px $bg-border;
-    color: white;
+    color: $font-color;
     font-size: 1rem;
     outline: 0;
     border-radius: 0.25rem;
@@ -96,23 +97,23 @@ option {
     background-color: $bg-secondary;
 }
 
-.btn {
+.btnn {
     //calcular button
     padding: 0.65rem;
     font-size: 1.25rem;
     background-color: $bg-border;
-    color: #ffff;
+    color: $font-color;
     border: solid 3px $bg-main;
     border-radius: 1rem;
     cursor: pointer;
 }
 
-.btn:hover {
+.btnn:hover {
     background-color: $bg-main;
     border: solid 3px $bg-border;
 }
 
-.btn:active {
+.btnn:active {
     position: relative;
     top: 1px;
 }
@@ -122,13 +123,14 @@ option {
 /*error alert starts*/
 .sweetError {
     background-color: #161920;
-    color: white;
+    color: $font-color;
     font-family: 'Open Sans', sans-serif;
 }
 
 .swal2-x-mark {
     border-radius: 50%;
 }
+
 /*error alert ends*/
 
 /*weather starts*/
@@ -136,7 +138,7 @@ option {
     position: absolute;
     top: 0;
     right: 0;
-    color: white;
+    color: $font-color;
     margin-right: $half-rem;
 }
 
@@ -154,7 +156,26 @@ option {
 .weather__icon {
     margin-right: $half-rem;
 }
+
 /*weather ends*/
+
+/*history starts*/
+.history__btn {
+    @extend .btnn;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.history__text {
+    width: fit-content;
+    font-family: $font;
+    font-size: 1.5rem;
+    color: $font-color;
+}
+
+/*history ends*/
 
 @media screen and (max-width: 900px) {
     .form {
@@ -170,5 +191,9 @@ option {
         position: static;
         text-align: center;
         margin-top: 34%;
+    }
+
+    .history__text {
+        font-size: 0.9rem;
     }
 }
